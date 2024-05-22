@@ -56,7 +56,7 @@ const wantRemove = {
         "Braided Hair", "Twin Tails", "Bangs", "Messy Hair", 
         "Bob Cut", "Curly Hair", "Hair Between Eyes", "Hime Cut", 
         "Side Bangs", "Fringe", "Pixie Cut", "Mohawk", "Undercut", 
-        "Bald", "Ombre Hair", "ponytail"
+        "Bald", "Ombre Hair", "ponytail", "braid"
     ],
     hairColor: [
         "hair color", "blonde hair", "black hair", "brown hair", 
@@ -93,29 +93,48 @@ document.getElementById('warningButton').addEventListener('click', function() {
     });
    
     const textAreaValueWantRemove = document.getElementById('texteraWantRemove').value;
-    console.log(textAreaValueWantRemove);
+    
     // Chuyển đổi giá trị từ textarea thành mảng
-    const textAreaArray =  textAreaValueWantRemove.split(" , ").map(item => item.trim().replace(/,/g, ''))
-    .filter(item => item.length > 0);;
-    console.log(textAreaArray);
+ 
+
+
+
+
     let element = document.getElementById("texteraout");
     let string = element.value;
-    console.log(string)
-    console.log(wantRemove)
-    console.log(tagValues)
     for (let i = 0; i < tagValues.length; i++) {
         // console.log(tagValues[i]);
+        string = removeTags(string,wantRemove,tagValues[i])
         document.getElementById("out").style.visibility = "visible";
         document.getElementById("texteraout").textContent = "";
-        document.getElementById("texteraout").textContent= removeTags(string,wantRemove,tagValues[i]);
+        document.getElementById("texteraout").textContent= string ;
     }
+    let textAreaArray =  textAreaValueWantRemove.split(" , ")
+    .map(item => item.trim().replace(/,/g, ''))
+    .filter(item => item.length > 0);
+    if (textAreaArray.length > 0) {
+      if (textAreaArray.some(item => string.includes(item))) {
+          // Nếu chuỗi string chứa ít nhất một phần tử thuộc textAreaArray
+          // Xóa các phần tử thuộc textAreaArray khỏi chuỗi string
+          textAreaArray.forEach(item => {
+              string = string.replace(item, '');
+          });
+         let cleanedString = string.split(/,\s*/).filter(item => item.trim() !== "").join(", ");
+         document.getElementById("out").style.visibility = "visible";
+        document.getElementById("texteraout").textContent = "";
+        document.getElementById("texteraout").textContent= cleanedString;
+      } else {
+          console.log("Chuỗi không chứa phần tử thuộc textAreaArray");
+      }
+
+  }
+  
 
 
 
 
     
-    //  = finalStr;
-
+    
 
     
 });
