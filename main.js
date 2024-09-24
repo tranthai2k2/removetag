@@ -47,7 +47,7 @@ const wantRemove = {
         "hair color", "blonde hair", "black hair", "brown hair", 
         "red hair", "blue hair", "green hair", "purple hair", 
         "pink hair", "white hair", "silver hair", "gray hair", 
-        "multicolored hair", "two tone hair", "ombre hair", 
+        "multicolored hair", "two tone hair", "ombre hair","two-tone hair","streaked hair", 
         "dyed hair", "pastel hair", "rainbow hair", "gradient hair", 
         "neon hair", "metallic hair", "vibrant hair","very short hair", "short hair", "medium hair", "long hair", "very long hair", "absurdly long hair", 
         "big hair", "bald", "bald girl", 
