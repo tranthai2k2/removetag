@@ -46,6 +46,8 @@ const wantRemove = {
     "flipped hair",
     "wolf cut",
     "animal ears",
+    "elf",
+    "animal ear fluff",
     "bat ears",
     "bear ears",
     "rabbit ears",
@@ -277,6 +279,7 @@ const wantRemove = {
   ],
   hairColor: [
     "hair color",
+    "grey hair",
     "blonde hair",
     "black hair",
     "brown hair",
