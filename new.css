@@ -1,0 +1,26 @@
+/* Style for the selected items */
+.selected-item {
+    display: inline-block;
+    background-color: #e0f7fa; /* Light blue background */
+    border: 1px solid #007bff; /* Blue border */
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.selected-item .remove-btn {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+}
