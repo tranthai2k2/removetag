@@ -820,7 +820,6 @@ sketch:[
     "tail censor",
     "out-of-frame censoring",
     "pointless censoring",
-    "uncensored",
     "censored",
     "censored background",
 
