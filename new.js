@@ -10,52 +10,58 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
   document.getElementById("tag-select").addEventListener("change", function () {
     const selectedValue = this.value; 
     const displayArea = document.getElementById("selected-content");
-  
-    // Kiểm tra xem lựa chọn không phải là giá trị mặc định
-    if (selectedValue !== "default_value") {
-      const existingItems = displayArea.querySelectorAll(".selected-item");
-      let itemExists = false;
-  
-      // Kiểm tra xem mục đã được thêm chưa
-      existingItems.forEach((item) => {
-        if (item.textContent.trim() === selectedValue) {
-          itemExists = true;
-        }
-      });
-  
-      // Nếu mục chưa tồn tại thì thêm vào
-      if (!itemExists) {
-        const selectedItem = document.createElement("div");
-        selectedItem.classList.add("selected-item");
-  
-        // Tạo nội dung cho phần tử với nút xóa
-        selectedItem.innerHTML = `
-                  ${selectedValue}
-                  <button class="remove-btn">&times;</button>
-              `;
-  
-        // Cập nhật allselected
-        allselected.push(selectedValue);
-        console.log("All selected:", allselected);
-  
-        // Thêm sự kiện cho nút xóa
-        selectedItem.querySelector(".remove-btn").addEventListener("click", function () {
-          displayArea.removeChild(selectedItem);
-          console.log("Item removed:", selectedValue);
-  
-          // Cập nhật lại allselected
-          allselected = allselected.filter((item) => item !== selectedValue);
-          console.log("All selected after removal:", allselected);
+
+    // Hàm thêm mục vào displayArea nếu chưa có
+    function addItem(value) {
+        const existingItems = displayArea.querySelectorAll(".selected-item");
+        let itemExists = false;
+
+        existingItems.forEach((item) => {
+            if (item.textContent.trim() === value) {
+                itemExists = true;
+            }
         });
-  
-        // Thêm phần tử vào vùng hiển thị
-        displayArea.appendChild(selectedItem);
-      }
+
+        if (!itemExists) {
+            const selectedItem = document.createElement("div");
+            selectedItem.classList.add("selected-item");
+
+            selectedItem.innerHTML = `
+                ${value}
+                <button class="remove-btn">&times;</button>
+            `;
+
+            allselected.push(value);
+            console.log("All selected:", allselected);
+
+            selectedItem.querySelector(".remove-btn").addEventListener("click", function () {
+                displayArea.removeChild(selectedItem);
+                console.log("Item removed:", value);
+
+                allselected = allselected.filter((item) => item !== value);
+                console.log("All selected after removal:", allselected);
+            });
+
+            displayArea.appendChild(selectedItem);
+        }
     }
-  
+
+    if (selectedValue === "all") {
+        // Lặp qua tất cả các option để thêm vào displayArea
+        const options = this.querySelectorAll("option");
+        options.forEach(option => {
+            if (option.value !== "default_value" && option.value !== "all") {
+                addItem(option.value);
+            }
+        });
+    } else if (selectedValue !== "default_value") {
+        addItem(selectedValue);
+    }
+
     // Reset dropdown về giá trị mặc định sau khi chọn
-    this.value = "default_value"; // Đảm bảo giá trị mặc định
-  });
+    this.value = "default_value";
+});
+
   
   // Xử lý sự kiện khi nút Submit được nhấn
   document.getElementById("myForm").addEventListener("submit", function (event) {
@@ -202,6 +208,9 @@ const attributes = {
     "robot ears",
     "number of ears",
     "extra ears",
+    "elf",
+    "dark elf",
+    "blood elf",
   ],
   tails: [
     "main",
@@ -251,6 +260,45 @@ const attributes = {
     "tail ribbon",
     "tail ring",
   ],
+  halos: [
+    "aqua halo",
+    "black halo",
+    "blue halo",
+    "broken halo",
+    "brown halo",
+    "crescent halo",
+    "cross halo",
+    "dark halo",
+    "double halo",
+    "drawn halo",
+    "fake halo",
+    "flaming halo",
+    "glowing halo",
+    "green halo",
+    "grey halo",
+    "halo behind head",
+    "halo removed",
+    "heart halo",
+    "holding halo",
+    "liquid halo",
+    "mechanical halo",
+    "melting halo",
+    "multicolored halo",
+    "orange halo",
+    "pink halo",
+    "purple halo",
+    "rainbow halo",
+    "rectangular halo",
+    "red halo",
+    "spiked halo",
+    "star halo",
+    "traditional halo",
+    "triangle halo",
+    "white halo",
+    "winged halo",
+    "yellow halo",
+    "no halo"
+],
   eyesColor: [
     "aqua eyes",
     "black eyes",
