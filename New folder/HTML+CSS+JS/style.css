@@ -1,0 +1,357 @@
+body{
+    margin: 0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none; /* Bỏ gạch chân */
+    color: inherit; /* Giữ màu sắc giống như văn bản xung quanh */
+    pointer-events: none; /* Ngăn chặn các hành động chuột */
+}
+ul li {
+    text-decoration: none;
+
+}
+div.navbar{
+    z-index: 5;
+    position: relative;
+}
+div.navbar .ontop::before{
+    content: '';
+    width: 30px;
+    height: 5px;
+    background-color: #bd1723;
+    display: block; /* Add display property to ensure it's rendered */
+}
+div.navbar .ontop{
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background-color: #bd1723;
+    bottom: -500px;
+    right: 40px;
+}
+div.navbar .ontop::after{
+    content: '';
+    width: 30px;
+    height: 5px;
+    background-color: #bd1723;
+    display: block; /* Add display property to ensure it's rendered */
+}
+#nav{
+    top:0;
+    width: 100%;
+    background-color: #bd1723;
+    display: flex;
+    position: fixed;
+}
+
+#nav > ul > li {
+    color: white;
+    padding: 10px;
+    display: Inline-block;
+    width: 100px;
+    text-align: center;
+    position: relative;
+    max-height: 40px;
+}
+
+#nav > ul > li:hover {
+    background-color: brown;
+    border-radius: 10%;
+}
+#nav > ul > li > ul {
+    display: none;
+    position: absolute;
+    top:38.5px; 
+    text-align: left;
+    background-color: #bd1723;
+
+}
+#nav > ul > li:hover > ul{
+    display: block;
+    z-index: 5;
+    
+}
+
+#nav > ul > li > ul {
+    padding: 10px;
+}
+#nav > ul > li > ul > li {
+    margin: 5px;
+    padding: 10px;
+    
+}
+#nav > ul > li > ul > li:hover {
+    background-color: brown;
+}
+
+.region-logo{
+    width: 100%;
+    text-align: center;
+    font-size:2vw
+}
+.wrap-time{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    border-bottom: black double;
+}
+.wrap-time>ul>li{
+    margin-right: 10px;
+    display: inline;
+    padding-right: 10px;
+    border-right: black solid;
+}
+
+#content {
+    padding: 0 10%;
+}
+.abf-homepage {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-top: 10px;
+    gap: 20px; /* Khoảng cách giữa các phần tử */
+}
+
+.row .row1{
+    width: 30%;
+}
+#content > div.abf-homepage > div.row.row3{
+    width: 30%;
+}
+
+#content > div.abf-homepage > div.row.row3 > div:nth-child(1) > div > div{
+
+}
+
+.row2{
+    width: 80%;
+    box-sizing: border-box;
+    padding : 0 20px;
+    border-left: 2px solid rgb(184, 184, 184);
+    border-right:2px solid rgb(184, 184, 184);
+}
+.profile {
+    display: flex; /* Sử dụng flexbox để chia đôi */
+    align-items: center; /* Căn giữa các phần theo chiều dọc */
+    margin: 20px; /* Thêm khoảng cách xung quanh */
+}
+.story p:first-of-type:hover {
+    color: red; /* Đổi màu chữ sang đỏ khi hover */
+}
+.story{
+    border-bottom: 1px dashed gray; /* Đường nét đứt, dày 1px, màu xám */
+}
+
+
+.info {
+    flex: 1; /* Phần thông tin chiếm một nửa chiều rộng */
+    padding-right: 20px; /* Thêm khoảng cách bên phải */
+}
+.info >p {
+    color:red;
+    font-size:15px;
+    font-weight: bold;
+}
+.info >span {
+   
+    font-size:12px;
+    color: gray;
+    
+}
+
+.profile img {
+    border-radius: 50%;
+    border: red solid 1px;
+    width: 20%; /* Đặt chiều rộng của ảnh */
+    
+}
+
+
+.datetime{
+    font-size: 15px;
+    color: gray;
+}
+.row-content1{
+    margin-bottom: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    border-bottom: 2px dashed rgba(0, 0, 0, 0.5); 
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 cột có kích thước bằng nhau */
+    grid-template-rows: auto auto; /* 2 hàng */
+    gap: 10px; /* Khoảng cách giữa các item */
+    padding: 10px;
+    
+  }
+  @media (max-width: 600px) {
+    .grid-container {
+      display: block; /* Chuyển sang 1 cột khi trên màn hình nhỏ */
+    }
+    #content > div.abf-homepage > div.row.row2 > div.row-content2 > div > div.item3{
+        border-left: none;
+        border-top: 2px dashed rgba(0, 0, 0, 0.5); 
+    }
+  }
+
+  .item1 {
+    grid-column: 1; /* Chiếm cột 1 */
+    grid-row: 1; /* Chiếm hàng 1 */
+    padding: 20px 0;
+    border-bottom: 2px dashed rgba(0, 0, 0, 0.5); 
+  }
+  
+  .item2 {
+    grid-column: 1; /* Chiếm cột 1 */
+    grid-row: 2; /* Chiếm hàng 2 */
+    padding: 20px 0;
+  }
+  
+  .item3 {
+    grid-column: 2; /* Chiếm cột 2 */
+    grid-row: 1 / span 2; /* Chiếm hàng 1 và 2 */
+    padding: 20px 0;
+    border-left: 2px dashed rgba(0, 0, 0, 0.5); 
+    padding: 10px;
+    text-align: center;
+  }
+  img {
+    width: 100%;
+  }
+
+.box-style-4{
+    margin-top: 32px;
+    border-top: 8px solid #f8f9fa;
+}
+.box-style-4  h2{
+    position: relative;
+}
+.box-style-4  h2:hover{
+    color: red;
+    
+}
+.box-style-4 > h2::before{
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 45px;
+    background: #bd1723; 
+    bottom: -10px;
+    left: 0;
+    display: block;
+}
+.box-content {
+    display: flex;
+    gap: 20px; /* Khoảng cách giữa các container */
+}
+.box-content > .container {
+    position: relative; /* Cần thiết để định vị các phần tử con */
+}
+.box-content > .container  .content {
+  text-align: center;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  right: 50%;
+    transform: translateX(50%);
+    z-index: 1;
+}
+
+.box-content >.container  .gardent {
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 100%);
+    z-index: 0;
+}
+
+
+
+.footer {
+    text-align: right;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%; /* Chiếm toàn bộ chiều rộng của container */
+    max-width: 600px; /* Giới hạn chiều rộng tối đa của slider */
+    height: 400px; /* Chiều cao cố định */
+    margin: 0 auto; /* Căn giữa container */
+    overflow: hidden; /* Ẩn phần ảnh bên ngoài của slide */
+  }
+  
+  /* Định nghĩa các slide trong slider */
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Hiệu ứng chuyển ảnh */
+  }
+  
+  .slide {
+    min-width: 100%; /* Đảm bảo mỗi slide chiếm toàn bộ khung chứa */
+    height: 100%; /* Đảm bảo chiều cao của mỗi slide bằng với khung chứa */
+    box-sizing: border-box;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo ảnh bao phủ toàn bộ khung chứa mà không bị méo */
+  }
+  
+  /* Định dạng nút prev và next */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 18px;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  .phantrang {
+    display: flex;
+    justify-content: space-between; /* Căn đều các phần tử */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    width: 100%; /* Hoặc chiều rộng cụ thể mà bạn muốn */
+}
+
+.prev-1, .next-2 {
+    margin-right: 5%; /* Khoảng cách bên phải cho nút bên trái */
+}
+
+.phantrang > p {
+    margin: 0; /* Bỏ khoảng cách mặc định của <p> */
+    flex-grow: 1; /* Để <p> chiếm không gian giữa */
+    text-align: center; /* Căn giữa số */
+    margin-left: 10%; /* Cách nút bên trái 10% */
+    margin-right: 10%; /* Cách nút bên phải 10% */
+}
+div.news-container{
+    margin-bottom: 20px;
+}
+div.news-container > .news-item-phantrang {
+    border-bottom: 2px dashed gray;
+    margin: 5px;
+
+}
