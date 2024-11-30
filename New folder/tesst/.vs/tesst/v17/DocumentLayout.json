@@ -1,0 +1,81 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\react-1\\test\\tesst\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{846902EB-3B54-4109-9FC6-0185FB65965A}|tesst\\tesst.csproj|d:\\react-1\\test\\tesst\\tesst\\services\\likepotsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{846902EB-3B54-4109-9FC6-0185FB65965A}|tesst\\tesst.csproj|solutionrelative:tesst\\services\\likepotsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{846902EB-3B54-4109-9FC6-0185FB65965A}|tesst\\tesst.csproj|d:\\react-1\\test\\tesst\\tesst\\services\\ilikepotsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{846902EB-3B54-4109-9FC6-0185FB65965A}|tesst\\tesst.csproj|solutionrelative:tesst\\services\\ilikepotsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{846902EB-3B54-4109-9FC6-0185FB65965A}|tesst\\tesst.csproj|d:\\react-1\\test\\tesst\\tesst\\controllers\\likepotscontroller1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{846902EB-3B54-4109-9FC6-0185FB65965A}|tesst\\tesst.csproj|solutionrelative:tesst\\controllers\\likepotscontroller1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 254,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LikePotsController1.cs",
+              "DocumentMoniker": "D:\\react-1\\test\\tesst\\tesst\\Controllers\\LikePotsController1.cs",
+              "RelativeDocumentMoniker": "tesst\\Controllers\\LikePotsController1.cs",
+              "ToolTip": "D:\\react-1\\test\\tesst\\tesst\\Controllers\\LikePotsController1.cs",
+              "RelativeToolTip": "tesst\\Controllers\\LikePotsController1.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCcAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T08:41:03.553Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ILikePotsService.cs",
+              "DocumentMoniker": "D:\\react-1\\test\\tesst\\tesst\\Services\\ILikePotsService.cs",
+              "RelativeDocumentMoniker": "tesst\\Services\\ILikePotsService.cs",
+              "ToolTip": "D:\\react-1\\test\\tesst\\tesst\\Services\\ILikePotsService.cs",
+              "RelativeToolTip": "tesst\\Services\\ILikePotsService.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAewAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T08:41:00.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LikePotsService.cs",
+              "DocumentMoniker": "D:\\react-1\\test\\tesst\\tesst\\Services\\LikePotsService.cs",
+              "RelativeDocumentMoniker": "tesst\\Services\\LikePotsService.cs",
+              "ToolTip": "D:\\react-1\\test\\tesst\\tesst\\Services\\LikePotsService.cs",
+              "RelativeToolTip": "tesst\\Services\\LikePotsService.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAgwFgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T08:40:59.008Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
