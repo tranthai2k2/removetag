@@ -27,7 +27,7 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
             selectedItem.classList.add("selected-item");
 
             selectedItem.innerHTML = `
-                ${value}
+                ${value} 
                 <button class="remove-btn">&times;</button>
             `;
 
